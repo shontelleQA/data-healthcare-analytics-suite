@@ -4,6 +4,11 @@ Analysis of encounter-to-claim timing revealed measurable operational delays tha
 
 Applying a 0–365 day operational window isolated actionable delays while excluding non-operational outliers. Results highlight specific encounter types with consistently longer delays, presenting clear opportunities for targeted process improvement and cost containment.
 
+**Primary Decision Question**
+
+Which encounter types are experiencing operational delays that drive higher claim costs, and where should intervention be prioritized?
+
+This dashboard is designed to support Claims Operations teams in prioritizing intervention efforts for high-delay, high-cost encounter types.
 ## Recommendations
 
 | Function            | Recommendation                                                                 | Expected Impact |
