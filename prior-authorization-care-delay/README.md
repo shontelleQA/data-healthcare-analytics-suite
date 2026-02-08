@@ -16,10 +16,6 @@ Primary datasets:
 - `claims.csv` — service dates, billing dates, and total claim cost
 - `patients.csv` — basic member demographics
 - `payers.csv` — payer coverage and payment information
----
-- Encounter date is defined as the `START` timestamp from `encounters.csv`.
-- Claim submission date is defined as `LASTBILLEDDATE1` from `claims.csv`.
-
 
 ## Key Metrics
 - Average delay (days) between encounter date and claim billing date
@@ -28,14 +24,13 @@ Primary datasets:
 - Delay distribution by encounter type
 
 ## Analysis Approach
-- Join encounters and claims using encounter and service dates
-- Calculate delay intervals using date differences
-- Group and aggregate delays by encounter type and cost
-- Validate date logic to ensure no negative or missing values
+- Join encounter and claim records using service and billing date fields
+- Calculate delay intervals in days between encounter start and claim submission
+- Apply operational delay thresholds to isolate actionable process delays
+- Aggregate delay metrics to identify departments and encounter types with the longest delays
 
 ## Deliverables
 - SQL queries to calculate delay metrics
-- Python notebook for exploratory analysis
 - Power BI dashboard summarizing delay patterns
 - This README documenting findings and assumptions
 
@@ -44,7 +39,8 @@ Primary datasets:
 - Encounter dates were verified to occur before billing dates
 - Records failing validation were excluded from analysis
 - Claims with delay values outside the 0–365 day window (4 records) were excluded as non-operational outliers.
-
+- Encounter date is defined as the `START` timestamp from `encounters.csv`.
+- Claim submission date is defined as `LASTBILLEDDATE1` from `claims.csv`.
 
 ## Limitations
 - Data is synthetic and does not represent real patients
