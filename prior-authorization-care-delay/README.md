@@ -16,6 +16,9 @@ Primary datasets:
 - `claims.csv` — service dates, billing dates, and total claim cost
 - `patients.csv` — basic member demographics
 - `payers.csv` — payer coverage and payment information
+---
+- Encounter date is defined as the `START` timestamp from `encounters.csv`.
+
 
 ## Key Metrics
 - Average delay (days) between encounter date and claim billing date
