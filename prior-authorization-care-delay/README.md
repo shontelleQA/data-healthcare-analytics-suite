@@ -1,3 +1,9 @@
+## Executive Summary
+
+Analysis of encounter-to-claim timing revealed measurable operational delays that correlate with higher claim costs. Claims submitted more than 30 days after service accounted for a disproportionate share of total claim spend, indicating that administrative lag is not just a timing issue but a cost driver.
+
+Applying a 0–365 day operational window isolated actionable delays while excluding non-operational outliers. Results highlight specific encounter types with consistently longer delays, presenting clear opportunities for targeted process improvement and cost containment.
+
 ## Project Summary
 
 This project analyzes delays between clinical encounters and claim processing to understand how prior authorization and operational timing impact payer efficiency and cost. Using synthetic healthcare data, the analysis focuses on identifying where time gaps occur in the claim lifecycle and how those delays may contribute to increased operational burden and financial risk.
