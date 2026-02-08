@@ -4,6 +4,15 @@ Analysis of encounter-to-claim timing revealed measurable operational delays tha
 
 Applying a 0–365 day operational window isolated actionable delays while excluding non-operational outliers. Results highlight specific encounter types with consistently longer delays, presenting clear opportunities for targeted process improvement and cost containment.
 
+## Recommendations
+
+| Function            | Recommendation                                                                 | Expected Impact |
+|---------------------|----------------------------------------------------------------------------------|-----------------|
+| Operations           | Review workflows for encounters with delays exceeding 30 days to identify intake or submission bottlenecks. | Reduced claim cycle time |
+| Provider Relations   | Educate high-delay encounter types on documentation and submission timelines.   | Fewer late submissions |
+| Claims Operations    | Prioritize monitoring of claims exceeding 30 days post-service.                | Earlier intervention |
+| Finance              | Track average delay days as an operational KPI alongside claim cost metrics.    | Improved cost visibility |
+
 ## Project Summary
 
 This project analyzes delays between clinical encounters and claim processing to understand how prior authorization and operational timing impact payer efficiency and cost. Using synthetic healthcare data, the analysis focuses on identifying where time gaps occur in the claim lifecycle and how those delays may contribute to increased operational burden and financial risk.
