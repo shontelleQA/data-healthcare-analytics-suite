@@ -23,15 +23,6 @@ This project analyzes delays between clinical encounters and claim processing to
 - Do longer delays correlate with higher claim costs?
 - What operational impact could result from reducing delays?
 
-## Data Used
-This project uses synthetic healthcare data generated for analytical practice.
-
-Primary datasets:
-- `encounters.csv` — encounter dates, encounter type, and base cost
-- `claims.csv` — service dates, billing dates, and total claim cost
-- `patients.csv` — basic member demographics
-- `payers.csv` — payer coverage and payment information
-
 ## Key Metrics
 - Average delay (days) between encounter date and claim billing date
 - Percentage of claims delayed more than 30 days
@@ -48,6 +39,15 @@ Primary datasets:
 - SQL queries to calculate delay metrics
 - Power BI dashboard summarizing delay patterns
 - This README documenting findings and assumptions
+
+## Data Used
+This project uses synthetic healthcare data generated for analytical practice.
+
+Primary datasets:
+- `encounters.csv` — encounter dates, encounter type, and base cost
+- `claims.csv` — service dates, billing dates, and total claim cost
+- `patients.csv` — basic member demographics
+- `payers.csv` — payer coverage and payment information
 
 ## Data Validation Notes
 - Date fields were checked for null or negative values
