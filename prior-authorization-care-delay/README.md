@@ -18,6 +18,7 @@ Primary datasets:
 - `payers.csv` — payer coverage and payment information
 ---
 - Encounter date is defined as the `START` timestamp from `encounters.csv`.
+- Claim submission date is defined as `LASTBILLEDDATE1` from `claims.csv`.
 
 
 ## Key Metrics
