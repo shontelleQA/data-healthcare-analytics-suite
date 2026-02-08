@@ -1,0 +1,27 @@
+-- Claim cost analysis by operational delay bucket
+
+SELECT
+    CASE
+        WHEN DATEDIFF(day, e.START, c.LASTBILLEDDATE1) BETWEEN 0 AND 7 THEN '0–7 days'
+        WHEN DATEDIFF(day, e.START, c.LASTBILLEDDATE1) BETWEEN 8 AND 30 THEN '8–30 days'
+        WHEN DATEDIFF(day, e.START, c.LASTBILLEDDATE1) BETWEEN 31 AND 60 THEN '31–60 days'
+        WHEN DATEDIFF(day, e.START, c.LASTBILLEDDATE1) BETWEEN 61 AND 90 THEN '61–90 days'
+        ELSE '91–365 days'
+    END AS delay_bucket,
+    COUNT(*) AS total_claims,
+    AVG(c.TOTAL_CLAIM_COST) AS avg_claim_cost,
+    SUM(c.TOTAL_CLAIM_COST) AS total_claim_cost
+FROM encounters e
+JOIN claims c
+    ON e.Id = c.ENCOUNTERID
+WHERE DATEDIFF(day, e.START, c.LASTBILLEDDATE1) BETWEEN 0 AND 365
+GROUP BY
+    CASE
+        WHEN DATEDIFF(day, e.START, c.LASTBILLEDDATE1) BETWEEN 0 AND 7 THEN '0–7 days'
+        WHEN DATEDIFF(day, e.START, c.LASTBILLEDDATE1) BETWEEN 8 AND 30 THEN '8–30 days'
+        WHEN DATEDIFF(day, e.START, c.LASTBILLEDDATE1) BETWEEN 31 AND 60 THEN '31–60 days'
+        WHEN DATEDIFF(day, e.START, c.LASTBILLEDDATE1) BETWEEN 61 AND 90 THEN '61–90 days'
+        ELSE '91–365 days'
+    END
+ORDER BY
+    avg_claim_cost DESC;
