@@ -43,6 +43,8 @@ Primary datasets:
 - Date fields were checked for null or negative values
 - Encounter dates were verified to occur before billing dates
 - Records failing validation were excluded from analysis
+- Claims with delay values outside the 0–365 day window (4 records) were excluded as non-operational outliers.
+
 
 ## Limitations
 - Data is synthetic and does not represent real patients
