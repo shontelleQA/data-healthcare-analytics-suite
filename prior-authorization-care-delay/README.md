@@ -1,14 +1,13 @@
 ## Executive Summary
 
+**Primary Decision Question** Which encounter types are experiencing operational delays that drive higher claim costs, and where should intervention be prioritized?
+
+This analysis examines the timing between clinical encounters and claim submission to identify operational delays that meaningfully impact claim cost. The resulting dashboard is designed to support Claims Operations teams in prioritizing intervention efforts for high-delay, high-cost encounter types.
+
 Analysis of encounter-to-claim timing revealed measurable operational delays that correlate with higher claim costs. Claims submitted more than 30 days after service accounted for a disproportionate share of total claim spend, indicating that administrative lag is not just a timing issue but a cost driver.
 
 Applying a 0–365 day operational window isolated actionable delays while excluding non-operational outliers. Results highlight specific encounter types with consistently longer delays, presenting clear opportunities for targeted process improvement and cost containment.
 
-**Primary Decision Question**
-
-Which encounter types are experiencing operational delays that drive higher claim costs, and where should intervention be prioritized?
-
-This dashboard is designed to support Claims Operations teams in prioritizing intervention efforts for high-delay, high-cost encounter types.
 ## Recommendations
 
 | Function            | Recommendation                                                                 | Expected Impact |
