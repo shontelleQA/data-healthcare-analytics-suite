@@ -19,13 +19,13 @@ Applying a 0–365 day operational window isolated actionable delays while exclu
 
 ## Project Summary
 
-This project analyzes delays between clinical encounters and claim processing to understand how prior authorization and operational timing impact payer efficiency and cost. Using synthetic healthcare data, the analysis focuses on identifying where time gaps occur in the claim lifecycle and how those delays may contribute to increased operational burden and financial risk.
+This project analyzes delays between clinical encounters and claim submission to understand how billing cycle timing impacts payer operational efficiency and cost. Using synthetic healthcare claims data, the analysis focuses on identifying where time gaps occur between service and billing, and how those delays contribute to increased financial burden and administrative risk.
 
 ## Business Questions
 - What is the average time between a clinical encounter and claim submission?
-- Which encounter types or departments experience the longest delays?
+- Which encounter types experience the longest billing delays?
 - Do longer delays correlate with higher claim costs?
-- What operational impact could result from reducing delays?
+- Where should Claims Operations prioritize intervention?
 
 ## Key Metrics
 - Average delay (days) between encounter date and claim billing date
@@ -34,22 +34,22 @@ This project analyzes delays between clinical encounters and claim processing to
 - Delay distribution by encounter type
 
 ## Analysis Approach
-- Join encounter and claim records using service and billing date fields
-- Calculate delay intervals in days between encounter start and claim submission
-- Apply operational delay thresholds to isolate actionable process delays
-- Aggregate delay metrics to identify departments and encounter types with the longest delays
+- Join encounter and claim records using patient and service date alignment
+- Calculate delay intervals in days between encounter start (START) and claim billing date (LASTBILLEDDATE1)
+- Apply operational delay thresholds (0–365 days) to isolate actionable process delays
+- Aggregate delay metrics to identify encounter types with the longest billing lag
 
 ## Deliverables
-- SQL queries to calculate delay metrics
-- Power BI dashboard summarizing delay patterns
-- This README documenting findings and assumptions
+- SQL queries to calculate billing delay metrics
+- Power BI dashboard summarizing delay patterns and cost impact
+- This README documenting findings, assumptions, and validation rules
 
 ## Data Used
-This project uses synthetic healthcare data generated for analytical practice.
+This project uses synthetic healthcare claims data generated for analytical modeling.
 
 Primary datasets:
-- `encounters.csv` — encounter dates, encounter type, and base cost
-- `claims.csv` — service dates, billing dates, and total claim cost
+- `encounters.csv` — encounter dates, encounter class, and total claim cost
+- `claims.csv` — service dates, billing dates, and simulated delay value
 - `patients.csv` — basic member demographics
 - `payers.csv` — payer coverage and payment information
 
@@ -63,10 +63,10 @@ Primary datasets:
 
 ## Limitations
 - Data is synthetic and does not represent real patients
-- Prior authorization is inferred through timing patterns, not explicit authorization records
+- Billing delay is modeled using simulated delay fields
 - Cost impact estimates are directional, not predictive
 
 ## Next Steps
-- Introduce simulated prior authorization indicators
-- Analyze delay impact on denial likelihood
-- Expand analysis to additional payer segments
+- Expand analysis to financial leakage using claims transaction data
+- Analyze outstanding balances by encounter type
+- Evaluate provider-level billing performance variation
