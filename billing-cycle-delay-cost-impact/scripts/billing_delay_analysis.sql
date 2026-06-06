@@ -322,3 +322,27 @@ ORDER BY max_delay_days DESC;
 -- delays for these encounter types were 30, 25, and 7 days respectively.
 -- This behavior appears to be a characteristic of the source dataset rather
 -- than a query or calculation issue.
+
+
+
+-- ==========================================
+-- SECTION 5: POWER BI DATASET EXPORT
+-- ==========================================
+
+-- Purpose:
+-- Create a row-level dataset for Power BI dashboard development.
+-- This dataset includes encounter type, billing delay, and claim cost
+-- for dashboard visualizations and KPI calculations.
+
+SELECT
+    c.APPOINTMENTID,
+    e.ENCOUNTERCLASS,
+    e.START_DATE,
+    c.LASTBILLEDDATE1,
+    DATEDIFF('day', e.START_DATE, c.LASTBILLEDDATE1) AS DELAY_DAYS,
+    e.TOTAL_CLAIM_COST
+FROM CLAIMS c
+JOIN ENCOUNTERS e
+    ON c.APPOINTMENTID = e.ID
+WHERE DATEDIFF('day', e.START_DATE, c.LASTBILLEDDATE1)
+      BETWEEN 0 AND 365;
