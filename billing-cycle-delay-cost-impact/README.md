@@ -1,4 +1,6 @@
 # Billing Cycle Delay & Cost Impact Analysis
+### Project Repository ###
+GitHub Repository: [View Project Files](https://github.com/shontelleQA/data-healthcare-analytics-suite/tree/main/billing-cycle-delay-cost-impact)
 
 
 
@@ -28,10 +30,8 @@ Analysis of healthcare claims and encounter records identified measurable billin
 - Average billing delay: **14.66 days**
 - Claims delayed more than 30 days: **5.87%**
 - Delayed claims represented **13.86%** of total claim cost
-- Inpatient and emergency encounters drove the majority of delay-related cost exposure
-
-These findings suggest that billing delays are concentrated within specific encounter workflows rather than occurring across the entire claims operation.
-
+- Inpatient and emergency encounters represented a relatively small share of claim volume but accounted for approximately 92.6% of delayed claim cost exposure
+- These findings suggest that billing delays are concentrated within specific encounter workflows rather than occurring across the entire claims operation.
 
 
 
@@ -142,6 +142,8 @@ Encounter types showing no claims delayed beyond 30 days were reviewed separatel
 - Inpatient encounters experienced the highest average billing delays.
 - Emergency encounters experienced the second-highest average billing delays.
 - Wellness encounters experienced the shortest average delays.
+- Inpatient and emergency encounters accounted for approximately 92.6% of delayed claim cost exposure.
+- High-cost billing delays were concentrated within a small subset of encounter types despite most claim volume occurring in wellness, ambulatory, and outpatient encounters.
 
 ### Encounter Types Driving Delayed Cost
 
@@ -181,8 +183,17 @@ Encounter types showing no claims delayed beyond 30 days were reviewed separatel
 
 ## Dashboard Preview
 
-*Power BI dashboard screenshot will be added after dashboard development is complete.*
+### Executive Summary
 
+![Executive Summary](dashboards/images/dashboard_page_1.png)
+
+### Operational Analysis
+
+![Operational Analysis](dashboards/images/dashboard_page_2.png)
+
+### Financial Impact Analysis
+
+![Financial Impact Analysis](dashboards/images/dashboard_page_3.png)
 ---
 
 ## Technical Appendix
@@ -204,12 +215,15 @@ Encounter types showing no claims delayed beyond 30 days were reviewed separatel
 6. Evaluate delay patterns by encounter type.
 7. Validate findings and investigate anomalies.
 
+
 ### Repository Contents
 
 - SQL analysis workflow
 - Individual SQL scripts
 - Power BI dashboard files
 - Dashboard screenshots
+- Dashboard documentation
+- Source data files
 
 
 ### Metric Definitions
