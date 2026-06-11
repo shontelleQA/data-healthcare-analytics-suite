@@ -23,8 +23,7 @@ By combining operational timing metrics with financial impact analysis, this pro
 
 ## Executive Summary
 
-Analysis of healthcare claims and encounter records identified measurable billing delays concentrated within specific encounter types rather than across the entire claims process.
-
+While average billing delay was 14.66 days, analysis showed that delay-related financial exposure was heavily concentrated within inpatient and emergency encounters. These encounter types represented a small share of total claim volume but accounted for approximately 92.6% of delayed claim cost exposure.
 ### Summary Results
 
 - Average billing delay: **14.66 days**
